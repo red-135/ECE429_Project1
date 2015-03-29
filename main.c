@@ -63,11 +63,11 @@ int main()
     // ========================================================================
 
     i = add(0,0);
-    TMP0 = d*d;
+    TMP0 = mult(d,d);
     C1: if(compare(i,TMP0,'l'))
     {
         j = add(0,0);
-        TMP1 = d*d;
+        TMP1 = mult(d,d);
         C2: if(compare(j,TMP1,'l'))
         {
             M[i][j] = add(0,0);
@@ -166,11 +166,11 @@ int main()
 
     load_printf_one("\n");
     i = add(0,0);
-    TMP0 = d*d;
+    TMP0 = mult(d,d);
     F1: if(compare(i,TMP0,'l'))
     {
         j = add(0,0);
-        TMP1 = d*d;
+        TMP1 = mult(d,d);
         F2: if(compare(j,TMP1,'l'))
         {
             load_printf_two("%d ", &M[i][j]);
