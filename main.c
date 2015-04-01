@@ -14,7 +14,7 @@ int main()
     int d, A[DEG][DEG], B[DEG][DEG], M[DEG*DEG][DEG*DEG];
     int i, j, rowa, colb;
 
-    int TMP0, TMP1, TMP2;
+    int TMP0, TMP1, TMP2, TMP3;
 
     // ========================================================================
     // Read d
@@ -32,9 +32,10 @@ int main()
         add(j,0,0);
         A2: if(compare(j,d,'l'))
         {
-            load_scanf("%d",&A[i][j]);
+            load_scanf("%d",&TMP0);
+            store(A[i][j],TMP0);
             add(j,j,1);
-            jump(A2)
+            jump(A2);
         }
         add(i,i,1);
         jump(A1);
@@ -50,9 +51,10 @@ int main()
         add(j,0,0);
         B2: if(compare(j,d,'l'))
         {
-            load_scanf("%d",&B[i][j]);
+            load_scanf("%d",&TMP0);
+            store(B[i][j],TMP0);
             add(j,j,1);
-            jump(B2)
+            jump(B2);
         }
         add(i,i,1);
         jump(B1);
@@ -103,11 +105,13 @@ int main()
 
                     if(compare(TMP0,0,'n'))
                     {
-                        store(M[TMP1][TMP2], 0);
+                        add(TMP3,0,0);
+                        store(M[TMP1][TMP2], TMP3);
                     }
                     if(compare(TMP0,0,'e'))
                     {
-                       store(M[TMP1][TMP2], 1);
+                        add(TMP3,0,1);
+                        store(M[TMP1][TMP2], TMP3);
                     }
                 }
                 add(j,j,1);
@@ -144,11 +148,13 @@ int main()
 
                     if(compare(TMP0,0,'n'))
                     {
-                        store(M[TMP1][TMP2], 0);
+                        add(TMP3,0,0);
+                        store(M[TMP1][TMP2], TMP3);
                     }
                     if(compare(TMP0,0,'e'))
                     {
-                        store(M[TMP1][TMP2], 1);
+                        add(TMP3,0,1);
+                        store(M[TMP1][TMP2], TMP3);
                     }
                 }
                 add(j,j,1);
