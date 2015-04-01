@@ -93,13 +93,13 @@ int main()
             D3: if(compare(j,d,'l'))
             {
                 load(TMP0, A[rowa][j]);
-                if(compare(TMP0,0,'g'))
+                if(compare(TMP0,0,'n'))
                 {
                     mult(TMP1,rowa,d);
-                    add(TMP1,TMP0,colb);
+                    add(TMP1,TMP1,colb);
                     mult(TMP2,j,d);
-                    add(TMP2,TMP1,colb);
-                    load(TMP0,M[TMP0][TMP1]);
+                    add(TMP2,TMP2,colb);
+                    load(TMP0,M[TMP1][TMP2]);
 
                     if(compare(TMP0,0,'n'))
                     {
@@ -134,13 +134,13 @@ int main()
             E3: if(compare(j,d,'l'))
             {
                 load(TMP0, B[j][colb]);
-                if(compare(TMP0,0,'g'))
+                if(compare(TMP0,0,'n'))
                 {
                     mult(TMP1,rowa,d);
-                    add(TMP1,TMP0,colb);
+                    add(TMP1,TMP1,colb);
                     mult(TMP2,rowa,d);
-                    add(TMP2,TMP1,j);
-                    load(TMP0,M[TMP0][TMP1]);
+                    add(TMP2,TMP2,j);
+                    load(TMP0,M[TMP1][TMP2]);
 
                     if(compare(TMP0,0,'n'))
                     {
