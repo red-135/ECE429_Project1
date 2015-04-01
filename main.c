@@ -65,12 +65,12 @@ int main()
     // ========================================================================
 
     add(i,0,0);
-    mult(TMP0,d,d);
-    C1: if(compare(i,TMP0,'l'))
+    C1: mult(TMP0,d,d);
+    if(compare(i,TMP0,'l'))
     {
         add(j,0,0);
-        mult(TMP1,d,d);
-        C2: if(compare(j,TMP1,'l'))
+        C2: mult(TMP1,d,d);
+        if(compare(j,TMP1,'l'))
         {
             add(TMP2,0,0);
             store(M[i][j],TMP2)
@@ -107,14 +107,12 @@ int main()
                     {
                         add(TMP3,0,0);
                         store(M[TMP1][TMP2], TMP3);
+                        jump(D4);
                     }
-                    if(compare(TMP0,0,'e'))
-                    {
-                        add(TMP3,0,1);
-                        store(M[TMP1][TMP2], TMP3);
-                    }
+                    add(TMP3,0,1);
+                    store(M[TMP1][TMP2], TMP3);
                 }
-                add(j,j,1);
+                D4: add(j,j,1);
                 jump(D3);
             }
             add(colb,colb,1);
@@ -150,14 +148,12 @@ int main()
                     {
                         add(TMP3,0,0);
                         store(M[TMP1][TMP2], TMP3);
+                        jump(E4);
                     }
-                    if(compare(TMP0,0,'e'))
-                    {
-                        add(TMP3,0,1);
-                        store(M[TMP1][TMP2], TMP3);
-                    }
+                    add(TMP3,0,1);
+                    store(M[TMP1][TMP2], TMP3);
                 }
-                add(j,j,1);
+                E4: add(j,j,1);
                 jump(E3);
             }
             add(colb,colb,1);
@@ -173,12 +169,12 @@ int main()
 
     store_printfo("\n");
     add(i,0,0);
-    mult(TMP0,d,d);
-    F1: if(compare(i,TMP0,'l'))
+    F1: mult(TMP0,d,d);
+    if(compare(i,TMP0,'l'))
     {
         add(j,0,0);
-        mult(TMP1,d,d);
-        F2: if(compare(j,TMP1,'l'))
+        F2: mult(TMP1,d,d);
+        if(compare(j,TMP1,'l'))
         {
             store_printft("%d ", &M[i][j]);
             add(j,j,1);
