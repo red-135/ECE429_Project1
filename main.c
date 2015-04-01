@@ -14,7 +14,7 @@ int main()
     int d, A[DEG][DEG], B[DEG][DEG], M[DEG*DEG][DEG*DEG];
     int i, j, rowa, colb;
 
-    int TMP0, TMP1, TMP2, TMP3;
+    int TMP0, TMP1, TMP2;
 
     // ========================================================================
     // Read d
@@ -105,12 +105,12 @@ int main()
 
                     if(compare(TMP0,0,'n'))
                     {
-                        add(TMP3,0,0);
-                        store(M[TMP1][TMP2], TMP3);
+                        add(TMP0,0,0);
+                        store(M[TMP1][TMP2], TMP0);
                         jump(D4);
                     }
-                    add(TMP3,0,1);
-                    store(M[TMP1][TMP2], TMP3);
+                    add(TMP0,0,1);
+                    store(M[TMP1][TMP2], TMP0);
                 }
                 D4: add(j,j,1);
                 jump(D3);
@@ -146,12 +146,12 @@ int main()
 
                     if(compare(TMP0,0,'n'))
                     {
-                        add(TMP3,0,0);
-                        store(M[TMP1][TMP2], TMP3);
+                        add(TMP0,0,0);
+                        store(M[TMP1][TMP2], TMP0);
                         jump(E4);
                     }
-                    add(TMP3,0,1);
-                    store(M[TMP1][TMP2], TMP3);
+                    add(TMP0,0,1);
+                    store(M[TMP1][TMP2], TMP0);
                 }
                 E4: add(j,j,1);
                 jump(E3);
