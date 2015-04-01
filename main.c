@@ -20,6 +20,11 @@ int main()
     // Read d
     // ========================================================================
 
+    #ifdef DEBUG
+        //Debug statements do not count towards ICi or IC
+        printf("d: ");
+    #endif /* DEBUG */
+
     load_scanf("%d", &d);
 
     // ========================================================================
@@ -32,6 +37,11 @@ int main()
         add(j,0,0);
         A2: if(compare(j,d,'l'))
         {
+            #ifdef DEBUG
+                //Debug statements do not count towards ICi or IC
+                printf("A[%d][%d]: ",i,j);
+            #endif /* DEBUG */
+
             load_scanf("%d",&TMP0);
             store(A[i][j],TMP0);
             add(j,j,1);
@@ -51,6 +61,11 @@ int main()
         add(j,0,0);
         B2: if(compare(j,d,'l'))
         {
+            #ifdef DEBUG
+                //Debug statements do not count towards ICi or IC
+                printf("B[%d][%d]: ",i,j);
+            #endif /* DEBUG */
+
             load_scanf("%d",&TMP0);
             store(B[i][j],TMP0);
             add(j,j,1);
