@@ -70,7 +70,8 @@ int main()
         mult(TMP1,d,d);
         C2: if(compare(j,TMP1,'l'))
         {
-            /*ISSUE*/ add(M[i][j],0,0);
+            add(TMP2,0,0);
+            store(M[i][j],TMP2)
             add(j,j,1);
             jump(C2);
         }
