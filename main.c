@@ -191,7 +191,8 @@ int main()
         F2: mult(TMP1,d,d);
         if(compare(j,TMP1,'l'))
         {
-            store_printft("%d ", &M[i][j]);
+            load(TMP2,M[i][j])
+            store_printft("%d ", &TMP2);
             add(j,j,1);
             jump(F2);
         }
