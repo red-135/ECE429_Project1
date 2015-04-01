@@ -22,24 +22,24 @@ int compare(int a, int b, char op)
     }
 }
 
-void store_scanf(char* string, int* location)
+void load_scanf(char* string, int* location)
 {
     ++g_counter;
-    ++g_counter_store;
+    ++g_counter_load;
     scanf(string, location);
 }
 
-void load_printfo(char* string)
+void store_printfo(char* string)
 {
     ++g_counter;
-    ++g_counter_load;
+    ++g_counter_store;
     printf(string);
 }
 
-void load_printft(char* string, int* location)
+void store_printft(char* string, int* location)
 {
     ++g_counter;
-    ++g_counter_load;
+    ++g_counter_store;
     printf(string, *location);
 }
 

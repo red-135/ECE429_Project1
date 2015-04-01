@@ -20,7 +20,7 @@ int main()
     // Read d
     // ========================================================================
 
-    store_scanf("%d", &d);
+    load_scanf("%d", &d);
 
     // ========================================================================
     // Block A
@@ -32,7 +32,7 @@ int main()
         add(j,0,0);
         A2: if(compare(j,d,'l'))
         {
-            store_scanf("%d",&A[i][j]);
+            load_scanf("%d",&A[i][j]);
             add(j,j,1);
             jump(A2)
         }
@@ -50,7 +50,7 @@ int main()
         add(j,0,0);
         B2: if(compare(j,d,'l'))
         {
-            store_scanf("%d",&B[i][j]);
+            load_scanf("%d",&B[i][j]);
             add(j,j,1);
             jump(B2)
         }
@@ -165,7 +165,7 @@ int main()
     // Block F
     // ========================================================================
 
-    load_printfo("\n");
+    store_printfo("\n");
     add(i,0,0);
     mult(TMP0,d,d);
     F1: if(compare(i,TMP0,'l'))
@@ -174,11 +174,11 @@ int main()
         mult(TMP1,d,d);
         F2: if(compare(j,TMP1,'l'))
         {
-            load_printft("%d ", &M[i][j]);
+            store_printft("%d ", &M[i][j]);
             add(j,j,1);
             jump(F2);
         }
-        load_printfo("\n");
+        store_printfo("\n");
         add(i,i,1);
         jump(F1);
     }

@@ -21,9 +21,9 @@ int g_counter_store;
 
 int compare(int a, int b, char op);
 
-void store_scanf(char* string, int* location);
-void load_printfo(char* string);
-void load_printft(char* string, int* location);
+void load_scanf(char* string, int* location);
+void store_printfo(char* string);
+void store_printft(char* string, int* location);
 
 void print_counters(int d);
 
