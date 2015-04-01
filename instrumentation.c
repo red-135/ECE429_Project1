@@ -3,34 +3,6 @@
 
 #include "instrumentation.h"
 
-int add(int a, int b)
-{
-    ++g_counter;
-    ++g_counter_add;
-    return a+b;
-}
-
-int sub(int a, int b)
-{
-    ++g_counter;
-    ++g_counter_sub;
-    return a-b;
-}
-
-int mult(int a, int b)
-{
-    ++g_counter;
-    ++g_counter_mult;
-    return a*b;
-}
-
-int divd(int a, int b)
-{
-    ++g_counter;
-    ++g_counter_divd;
-    return a/b;
-}
-
 int compare(int a, int b, char op)
 {
     ++g_counter;
@@ -50,20 +22,6 @@ int compare(int a, int b, char op)
     }
 }
 
-int load(int a)
-{
-    ++g_counter;
-    ++g_counter_load;
-    return a;
-}
-
-int store(int a)
-{
-    ++g_counter;
-    ++g_counter_store;
-    return a;
-}
-
 void store_scanf(char* string, int* location)
 {
     ++g_counter;
@@ -71,14 +29,14 @@ void store_scanf(char* string, int* location)
     scanf(string, location);
 }
 
-void load_printf_one(char* string)
+void load_printfo(char* string)
 {
     ++g_counter;
     ++g_counter_load;
     printf(string);
 }
 
-void load_printf_two(char* string, int* location)
+void load_printft(char* string, int* location)
 {
     ++g_counter;
     ++g_counter_load;
