@@ -18,6 +18,7 @@ int compare(int a, int b, char op)
         case 'n':
             return a != b;
         default:
+            printf("ERROR in compare(a=%d,b=%d,op=%c): Not a valid op.\n",a,b,op);
             exit(1);
     }
 }
