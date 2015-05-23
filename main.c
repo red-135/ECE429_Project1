@@ -88,7 +88,7 @@ int main()
         if(compare(j,TMP1,'l'))
         {
             add(TMP2,0,0);
-            store(M[i][j],TMP2)
+            store(M[i][j],TMP2);
             add(j,j,1);
             jump(C2);
         }
@@ -191,7 +191,7 @@ int main()
         F2: mult(TMP1,d,d);
         if(compare(j,TMP1,'l'))
         {
-            load(TMP2,M[i][j])
+            load(TMP2,M[i][j]);
             store_printft("%d ", &TMP2);
             add(j,j,1);
             jump(F2);
